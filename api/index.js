@@ -9,7 +9,9 @@ import path from 'path';
 dotenv.config();
 console.log('MongoDB URI:', process.env.MONGO);
 mongoose
-  .connect(process.env.MONGO)
+  .connect(process.env.MONGO,
+    { useNewUrlParser: true, useUnifiedTopology: true }
+  )
   .then(() => {
     console.log('Connected to MongoDB!');
   })
