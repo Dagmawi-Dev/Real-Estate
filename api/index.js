@@ -21,13 +21,13 @@ mongoose
 
 const app = express();
 
-app.use(
+/* app.use(
   cors({
     origin: true,
     credentials: true,
     allowedHeaders: ["Content-Type", "Set-Cookie", "Cookie"],
   })
-);
+); */
 
 app.use(express.json());
 
